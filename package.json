@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack --progress --colors --watch"
   },
   "keywords": [],
   "author": "",
@@ -13,9 +13,13 @@
     "babel-core": "^6.24.0",
     "babel-loader": "^6.4.1",
     "babel-preset-react": "^6.23.0",
+    "css-loader": "^0.27.3",
     "extract-text-webpack-plugin": "^2.1.0",
+    "node-sass": "^4.5.1",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+    "sass-loader": "^6.0.3",
+    "style-loader": "^0.16.0",
     "webpack": "^2.3.0"
   }
 }
