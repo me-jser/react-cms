@@ -5,7 +5,7 @@ ___
 
 HOWTO
 ___
-- 执行 npm install (建议使用 [cnpm](https://npm.taobao.org/))
+- 执行 `npm install` (建议使用 [cnpm](https://npm.taobao.org/))
 - 执行 `npm run dev` 进行编译和watch
 - 在浏览器中访问即可
 

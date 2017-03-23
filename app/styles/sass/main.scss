@@ -1,14 +1,17 @@
-.test{
-  p{
-    background-color:red;
+@import "common/common.scss";
 
-  }
+.container{
+  width: 100%;
 }
-.try{
-  p{
-    font-size: 20px;
-    a{
-      color: #000;
-    }
-  }
+
+.dash-menu{
+  width: $dashMenuWidth;
+  height: 100%;
+  background-color: $dashMenuBlack;
+  position: absolute;
+  left: 0;
+  top:0;
+}
+.dash-content{
+  margin:0 0 0 $dashMenuWidth;
 }

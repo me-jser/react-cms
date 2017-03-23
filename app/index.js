@@ -6,8 +6,9 @@ import {Hello} from './components/home.jsx';
 import ReactDOM from 'react-dom'
 
 import './styles/sass/main'
+import './styles/lib/reset'
 
-ReactDOM.render(
-    <Hello />,
-    document.getElementById('container')
-);
+//ReactDOM.render(
+//    <Hello />,
+//    document.getElementById('container')
+//);

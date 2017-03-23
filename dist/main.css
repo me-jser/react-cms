@@ -1,7 +1,1 @@
-.test p {
-  background-color: red; }
-
-.try p {
-  font-size: 20px; }
-  .try p a {
-    color: #000; }
+.float__block--left{float:left}.float__block--right{float:right}.over__block--hidden{overflow:hidden}.container{width:100%}.dash-menu{width:220px;height:100%;background-color:#4f5467;position:absolute;left:0;top:0}.dash-content{margin:0 0 0 220px}
