@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新文章--一个前端</title>
+    <link href="main.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div class="container">
+    <div class="dash-menu">
+        <aside class="dash-menu--logo"><em class="dash-menu--board">仪表盘</em><em class="dash-menu--site">一个前端</em></aside>
+        <aside class="dash-menu--avatar"></aside>
+        <aside class="dash-menu--owner">John Smith</aside>
+        <aside class="dash-menu__menus--lists">
+            <ul>
+                <li class="dash-menu--items__selected"><i class="font__icon--fonts">&#xe642;</i>文章
+                    <ul class="dash-menu__lists__sub">
+                        <li class="dash-menu__items--active"><a href="">所有文章</a></li>
+                        <li><a href="">写文章</a></li>
+                        <li><a href="">标签</a></li>
+                    </ul>
+                </li>
+                <li><i class="font__icon--fonts">&#xe76a;</i>外观
+
+                </li>
+                <li ><i class="font__icon--fonts">&#xe624;</i>用户</li>
+                <li><i class="font__icon--fonts">&#xe606;</i>工具</li>
+                <li><i class="font__icon--fonts">&#xe600;</i>设置</li>
+            </ul>
+        </aside>
+    </div>
+    <div class="dash-options">
+        <header class="tool-bar">
+            <div class="tool-bar__dash--toogle"><i class="font__icon--fonts"><a href="">&#xe630;</a></i></div>
+            <div class="tool-bar__search">
+                <input type="text" class="tool-bar__search__input" placeholder="搜索....">
+                <i class="font__icon--fonts tool-bar__search--icon">&#xe652;</i>
+            </div>
+            <div class="tool-bar__system--setting">
+                <ul>
+                    <li><a href="" class="font__icon--fonts">&#xe611;</a></li>
+                    <li><a href="" class="font__icon--fonts">&#xe642;</a></li>
+                    <li class="tool-bar__system__user"><a href="" >John Smith</a><i class="font__icon--fonts">&#xe619;</i></li>
+                    <li><a href="" class="font__icon--fonts">&#xe600;</a></li>
+                </ul>
+            </div>
+        </header>
+        <div class="posts">
+            <div class="posts__header">
+                <header class="posts__header--name"><h1>新文章</h1></header>
+            </div>
+            <div class="posts__form__wraper">
+                <form action="" id="posts__form">
+                    <div><input type="text" class="posts__form__title" title="title"></div>
+                   <div><textarea name="" id="" cols="30" rows="10" class="posts__from__content" title="content"></textarea></div>
+                   <div><button class="posts__form__save">保存</button></div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+<script src="bundle.js"></script>
+</html>
