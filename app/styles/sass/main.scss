@@ -11,7 +11,231 @@
   position: absolute;
   left: 0;
   top:0;
+  padding: 20px 0;
+  text-align: center;
 }
-.dash-content{
+.dash-options{
   margin:0 0 0 $dashMenuWidth;
+}
+.dash-menu--logo{
+  font-size: 18px;
+  em{
+    margin:0 10px 0 0;
+  }
+}
+.dash-menu--board{
+  color: #ffffff;
+  font-weight: bold;
+}
+.dash-menu--site{
+  color: $dashWordsColor;
+}
+.dash-menu--avatar{
+  width: 90px;
+  height: 90px;
+  background-image: url('../images/varun.jpg');
+  background-repeat: no-repeat;
+  -webkit-background-size:100% 100%;
+  background-position: center center;
+  background-size:100% 100%;
+  -webkit-border-radius:50px;
+  -moz-border-radius:50px;
+  border-radius:50px;
+  margin:20px 20px 10px ($dashMenuWidth - 90) / 2 ;
+  text-align: center;
+}
+.dash-menu--owner{
+  color: $dashWordsColor;
+}
+.dash-menu__menus--lists{
+  margin:$dashWidgetMarginTop 0 0 0;
+  ul{
+    li{
+      text-align: left;
+      color: $dashWordsColor;
+      line-height: 45px;
+      letter-spacing:0.5em;
+      cursor: pointer;
+      &:hover{
+        background-color: $dashListsHoverColor;
+        color: $dashTextHoverColor;
+      }
+      i{
+        margin: 0 25px 0 25px;
+        font-size: 20px;
+        float: left;
+      }
+    }
+  }
+}
+.dash-menu--items__selected{
+  background-color: $dashTextHoverColor;
+  color: #ffffff !important;
+}
+.dash-menu__lists__sub{
+  background-color: $dashMenuBlack;
+    li{
+      margin:0 0 0 77px;
+      &:hover{
+        background-color: $dashMenuBlack !important;
+      }
+      &:hover > a{
+        color: $dashTextHoverColor;
+      }
+      a{
+        color: $dashWordsColor;
+        
+      }
+    }
+
+}
+.dash-menu__items--active{
+  a{
+    color: #ffffff !important;
+  }
+
+}
+.tool-bar{
+  position: relative;
+  height: 60px;
+  line-height: 60px;
+  padding:0 20px;
+  background-color: $dashTextHoverColor;
+  div{
+    display: inline-block;
+  }
+}
+.tool-bar__dash--toogle{
+  a{
+    color: #ffffff;
+    font-size:$iconFontsFontSize;
+  }
+}
+.tool-bar__search{
+  margin:0 0 0 15px;
+  position: relative;
+}
+.tool-bar__search__input{
+  height: 30px;
+  line-height: 30px;
+  width: 200px;
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  border-radius:40px;
+  border: none;
+  padding: 0 10px;
+  transition: width 1s;
+  outline:none;
+  &:focus{
+    width:400px;
+  }
+}
+.tool-bar__search--icon{
+  position: absolute;
+  right:10px;
+  top:2px;
+  font-size:$iconFontsFontSize ;
+  cursor: pointer;
+}
+
+.tool-bar__system--setting{
+  position: absolute;
+  right:20px;
+  color: #ffffff;
+  font-size:$iconFontsFontSize - 2;
+  ul{
+    li{
+      display: inline-block;
+      margin:0 0 0 20px;
+      a{
+        color: #ffffff;
+        //font-size:$iconFontsFontSize - 2;
+      }
+    }
+  }
+}
+.tool-bar__system__user{
+  a{
+    font-size:14px;
+  }
+  i{
+    margin:0 0 0 10px;
+  }
+}
+.posts{
+  background-color: #edf1f5;
+  height: 100%;
+  min-height: 600px;
+}
+
+.posts__header{
+  position: relative;
+  height: 60px;
+  line-height: 60px;
+  background-color: #ffffff;
+  padding: 0 20px;
+  > *{
+    display: inline-block;
+  }
+}
+  .posts__header--name{
+  h1{
+    font-size:20px;
+    color: $dashWordsColor;
+  }
+  }
+.posts__header--filter{
+  width:100px;
+  position: absolute;
+  right:100px;
+  ul{
+    li{
+      display: inline-block;
+      &:last-child:before{
+        color: #ccc;
+        content: "/\00a0";
+      }
+    }
+  }
+}
+.posts__header--publish{
+  position: absolute;
+  right:20px;
+  font-size:25px;
+  a{
+    &:hover{
+      @extend .fonts__color--blue
+    }
+  }
+
+}
+.posts__header--active{
+  @extend .fonts__color--blue
+}
+
+.posts-lists{
+  background-color: #ffffff;
+  width: 94%;
+  margin:$dashWidgetMarginTop auto auto;
+}
+.post-lists__table{
+  width: 100%;
+  border: 1px #dedede solid;
+  thead tr{
+    height:40px;
+    line-height: 40px;
+  }
+   tr{
+    height:100px;
+     line-height:50px;
+  }
+  td{
+    text-align: center;
+    a{
+      @extend  .fonts__color--blue
+    }
+  }
+ tbody  tr:nth-child(odd){
+    background-color: #f9f9f9;
+  }
 }

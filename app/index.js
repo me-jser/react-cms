@@ -7,6 +7,8 @@ import ReactDOM from 'react-dom'
 
 import './styles/sass/main'
 import './styles/lib/reset'
+import './styles/sass/common/basicStyle'
+import './styles/images/importImg'
 
 //ReactDOM.render(
 //    <Hello />,

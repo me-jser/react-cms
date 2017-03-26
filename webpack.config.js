@@ -9,7 +9,8 @@ module.exports = {
     entry: path.resolve(__dirname, './app/index.js'),
     output:{
         path: path.join(path.resolve(__dirname, './dist')),
-        filename: 'bundle.js'
+        filename: 'bundle.js',
+        "publicPath": "/"
     },
     resolve: {
         extensions: [' ', '.js', '.jsx', '.less', '.scss', '.css']
@@ -44,10 +45,16 @@ module.exports = {
                     use: ['css-loader']
                 })
             }
+            ,
+            {
+                test: /\.(gif|png|jpe?g|svg)$/i,
+                exclude: /^node_modules$/,
+                loader: 'url-loader?limit=8192&name=images/[hash:8].[name].[ext]'
+            }
         ]
     },
     plugins: [
-        new ExtractTextPlugin('[name].css'),
+        new ExtractTextPlugin('main.css'),
         new OptimizeCssAssetsPlugin({
             assetNameRegExp: /\.css$/g,
             cssProcessor: require('cssnano'),

@@ -1,6 +1,12 @@
 
-$dashMenuBlack:#4f5467;
-$dashMenuWidth:220px;
+$dashMenuBlack:#4f5467;//面板背景颜色
+$dashMenuWidth:220px;//面板宽度
+$dashWordsColor:#a6acbc;//面板字体颜色,浅灰色
+$dashWidgetMarginTop:20px;//面板菜单控件之间margin-top
+$dashListsHoverColor:#3c4153;//菜单项hover时效果
+$dashTextHoverColor:#03a9f3;//文字hover时颜色
+$iconFontsFontSize:20px;//icon的font-size
+
 .float__block--left{
   float: left;
 }
@@ -9,4 +15,12 @@ $dashMenuWidth:220px;
 }
 .over__block--hidden{
   overflow: hidden;
+}
+.position__block--center{
+  margin: 0 auto;
+}
+
+
+.fonts__color--blue{
+  color: $dashTextHoverColor;
 }
