@@ -2,7 +2,6 @@
 //var Hello = require('./components/home.jsx');
 
 import React from 'react';
-import {Hello} from './components/home.jsx';
 import ReactDOM from 'react-dom'
 
 import './styles/sass/main'
@@ -10,7 +9,11 @@ import './styles/lib/reset'
 import './styles/sass/common/basicStyle'
 import './styles/images/importImg'
 
-//ReactDOM.render(
-//    <Hello />,
-//    document.getElementById('container')
-//);
+import {App} from './components/App';
+
+
+
+ReactDOM.render(
+    <App />,
+    document.getElementById('container')
+);
