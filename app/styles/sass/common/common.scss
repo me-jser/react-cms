@@ -20,7 +20,38 @@ $iconFontsFontSize:20px;//icon的font-size
   margin: 0 auto;
 }
 
-
+//font模块预定义样式
 .fonts__color--blue{
   color: $dashTextHoverColor;
+}
+
+//背景模块预定义样式
+.background__color--gray{
+  background-color: #edf1f5;
+}
+
+
+//limit样式
+.limit__overflow--hidden{
+  overflow: hidden;
+}
+
+//box样式
+
+.box__margin__top--20{
+  margin-top:20px;
+}
+
+
+//form basic style
+.form__input--focus{
+  &:focus{
+    outline: none;
+    border: 1px $dashTextHoverColor solid;
+  }
+}
+
+
+.border__solid--gray{
+  border: 1px #dedede solid;
 }

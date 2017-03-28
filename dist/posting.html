@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>新文章--一个前端</title>
-    <link href="main.css" rel="stylesheet" type="text/css" />
+    <link href="main.css" rel="stylesheet" type="text/css"/>
 </head>
 
 <body>
 <div class="container">
     <div class="dash-menu">
-        <aside class="dash-menu--logo"><em class="dash-menu--board">仪表盘</em><em class="dash-menu--site">一个前端</em></aside>
+        <aside class="dash-menu--logo"><em class="dash-menu--board">仪表盘</em><em class="dash-menu--site">一个前端</em>
+        </aside>
         <aside class="dash-menu--avatar"></aside>
         <aside class="dash-menu--owner">John Smith</aside>
         <aside class="dash-menu__menus--lists">
@@ -24,7 +25,7 @@
                 <li><i class="font__icon--fonts">&#xe76a;</i>外观
 
                 </li>
-                <li ><i class="font__icon--fonts">&#xe624;</i>用户</li>
+                <li><i class="font__icon--fonts">&#xe624;</i>用户</li>
                 <li><i class="font__icon--fonts">&#xe606;</i>工具</li>
                 <li><i class="font__icon--fonts">&#xe600;</i>设置</li>
             </ul>
@@ -41,21 +42,72 @@
                 <ul>
                     <li><a href="" class="font__icon--fonts">&#xe611;</a></li>
                     <li><a href="" class="font__icon--fonts">&#xe642;</a></li>
-                    <li class="tool-bar__system__user"><a href="" >John Smith</a><i class="font__icon--fonts">&#xe619;</i></li>
+                    <li class="tool-bar__system__user"><a href="">John Smith</a><i class="font__icon--fonts">
+                        &#xe619;</i></li>
                     <li><a href="" class="font__icon--fonts">&#xe600;</a></li>
                 </ul>
             </div>
         </header>
-        <div class="posts">
+        <div class="posts background__color--gray">
             <div class="posts__header">
                 <header class="posts__header--name"><h1>新文章</h1></header>
             </div>
             <div class="posts__form__wraper">
-                <form action="" id="posts__form">
-                    <div><input type="text" class="posts__form__title" title="title"></div>
-                   <div><textarea name="" id="" cols="30" rows="10" class="posts__from__content" title="content"></textarea></div>
-                   <div><button class="posts__form__save">保存</button></div>
+                <form action="" id="posts__form" class="background__color--gray posts__form--style ">
+                    <div><input type="text" class="posts__form__title" title="title" placeholder="在此输入标题"></div>
+                    <div><textarea name="" id="" cols="30" rows="20" class="posts__from__content" title="content" placeholder="在此输入正文"></textarea></div>
+                    <div>
+                        <button class="posts__form__save">发布</button>
+                    </div>
                 </form>
+                <aside class="posts__info">
+                    <aside class="posts__info--publish over__block--hidden">
+                        <header class="posts__info--name">
+                            <h1>发布</h1><span><a href="" class="font__icon--fonts">&#xe631;</a></span>
+                        </header>
+                        <div class="posts__publish__option">
+                            <button class="post__publish--draft">存草稿</button>
+                            <button class="post__publish--preview">预览</button>
+                        </div>
+                    </aside>
+                    <aside class="posts__info--publish over__block--hidden box__margin__top--20">
+                        <header class="posts__info--name">
+                            <h1>标签</h1><span><a href="" class="font__icon--fonts">&#xe631;</a></span>
+                        </header>
+                        <div class="post__info--tags">
+                            <form action="" id="post--tags">
+                                <input type="text" title="tag" class="post--tags__insert">
+                                <button class="post--tags__add">添加</button>
+                                <div class="post--tags__displayer">
+                                    <ul>
+                                        <li><i class="font__icon--fonts"><a href="">&#xe604;</a></i><a href="">前端</a></li>
+                                        <li><i class="font__icon--fonts"><a href="">&#xe604;</a></i><a href="">前端</a></li>
+                                        <li><i class="font__icon--fonts"><a href="">&#xe604;</a></i><a href="">前端</a></li>
+                                    </ul>
+                                </div>
+                            </form>
+
+                        </div>
+                    </aside> <aside class="posts__info--publish over__block--hidden box__margin__top--20">
+                        <header class="posts__info--name">
+                            <h1>分类</h1><span><a href="" class="font__icon--fonts">&#xe631;</a></span>
+                        </header>
+                        <div class="post__info--tags">
+                            <form action="" id="post--catalogue">
+                                <input type="text" title="tag" class="post--tags__insert">
+                                <button class="post--tags__add">添加</button>
+                                <div class="post--tags__displayer">
+                                    <ul>
+                                        <li><i class="font__icon--fonts"><a href="">&#xe604;</a></i><a href="">前端</a></li>
+                                        <li><i class="font__icon--fonts"><a href="">&#xe604;</a></i><a href="">前端</a></li>
+                                        <li><i class="font__icon--fonts"><a href="">&#xe604;</a></i><a href="">前端</a></li>
+                                    </ul>
+                                </div>
+                            </form>
+
+                        </div>
+                    </aside>
+                </aside>
             </div>
 
         </div>
