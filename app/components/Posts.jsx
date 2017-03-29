@@ -1,4 +1,5 @@
 import React from 'react';
+import {PostsLists} from '../components/PostsLists';
 
 var Posts = React.createClass({
     render: function () {
@@ -25,29 +26,7 @@ var Posts = React.createClass({
                             <td>日期</td>
                         </tr>
                         </thead>
-                        <tbody>
-                        <tr>
-                            <td><a href="">ES6新特性</a></td>
-                            <td><a href="">John Smith</a></td>
-                            <td><a href="">前端技术</a></td>
-                            <td><a href="">JS,ES6</a></td>
-                            <td>2017年03月26日</td>
-                        </tr>
-                        <tr>
-                            <td><a href="">ES6新特性</a></td>
-                            <td><a href="">John Smith</a></td>
-                            <td><a href="">前端技术</a></td>
-                            <td><a href="">JS,ES6</a></td>
-                            <td>2017年03月26日</td>
-                        </tr>
-                        <tr>
-                            <td><a href="">ES6新特性</a></td>
-                            <td><a href="">John Smith</a></td>
-                            <td><a href="">前端技术</a></td>
-                            <td><a href="">JS,ES6</a></td>
-                            <td>2017年03月26日</td>
-                        </tr>
-                        </tbody>
+                        <PostsLists />
                     </table>
                 </article>
             </div>
