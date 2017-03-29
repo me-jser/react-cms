@@ -4,7 +4,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const webpack = require('webpack');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const proxy = require('http-proxy-middleware');
-const devServer = require('webpack-dev-server');
+const  BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 module.exports = {
     entry: path.resolve(__dirname, './app/index.js'),
     output:{
@@ -12,11 +12,23 @@ module.exports = {
         filename: 'bundle.js',
         "publicPath": "/"
     },
+    /**代理配置,访问server获取数据
+     * 访问 http://127.0.0.1:8080/posts
+     * 会转发到 http://127.0.0.1:3000/posts
+     */
     devServer: {
+        historyApiFallback: true,
+        hot: true,
+        inline: true,
+        contentBase: './dist',
+        port: 8080,
+        stats: { colors: true },
+
         proxy: {
-            '/': {
-                target: 'http://127.0.0.1:3000/',
-                secure: false
+            '/api': {
+                target: 'http://127.0.0.1:3000',
+                pathRewrite: {'^/api' : 'posts'},
+                changeOrigin: true
             }
         }
     },

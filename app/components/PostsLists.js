@@ -6,6 +6,9 @@ var PostsLists = React.createClass({
         var PostsListsData = [];
     },
     componentDidMount: function(){
+        $.get('http://localhost:8080/api',function(result){
+            console.log(result);
+        })
     },
     render: function(){
         return (
