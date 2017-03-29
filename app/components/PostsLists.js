@@ -1,16 +1,11 @@
 import React from 'react';
 
-const Data = require('../..//server/lib/api');
 
 var PostsLists = React.createClass({
     getInitState: function(){
         var PostsListsData = [];
     },
     componentDidMount: function(){
-        Data.find({}).
-            done(result =>{
-            console.log(result);
-        })
     },
     render: function(){
         return (

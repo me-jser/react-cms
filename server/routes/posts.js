@@ -2,12 +2,12 @@ var express = require('express');
 var router = express.Router();
 var Data = require('../lib/api');
 
-var postsData = [];
+var postsData ={};//声明一个全局的object存放数据
 
 function getPostsData(){
     Data.find({}).
     then(result => {
-        postsData.push(result);
+        postsData = result;
     });
 }
 
@@ -15,6 +15,7 @@ getPostsData();
 /* GET posts listing. */
 router.get('/', function(req, res, next) {
     res.setHeader('Content-Type', 'application/json');
+    //console.log(postsData);
     res.send(JSON.stringify(postsData));
     return true;
 

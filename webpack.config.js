@@ -3,14 +3,22 @@ const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const webpack = require('webpack');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-
+const proxy = require('http-proxy-middleware');
+const devServer = require('webpack-dev-server');
 module.exports = {
-
     entry: path.resolve(__dirname, './app/index.js'),
     output:{
         path: path.join(path.resolve(__dirname, './dist')),
         filename: 'bundle.js',
         "publicPath": "/"
+    },
+    devServer: {
+        proxy: {
+            '/': {
+                target: 'http://127.0.0.1:3000/',
+                secure: false
+            }
+        }
     },
     resolve: {
         extensions: [' ', '.js', '.jsx', '.less', '.scss', '.css']
@@ -63,3 +71,4 @@ module.exports = {
         })
     ]
 };
+
