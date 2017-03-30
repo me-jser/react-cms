@@ -29,6 +29,11 @@ module.exports = {
                 target: 'http://127.0.0.1:3000',
                 pathRewrite: {'^/api' : 'posts'},
                 changeOrigin: true
+            },
+            '/user': {
+                target: 'http://127.0.0.1:3000',
+                pathRewrite: {'^/user' : 'users'},
+                changeOrigin: true
             }
         }
     },

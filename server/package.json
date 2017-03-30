@@ -12,7 +12,8 @@
     "express": "~4.14.1",
     "jade": "~1.11.0",
     "morgan": "~1.7.0",
-    "serve-favicon": "~2.3.2"
+    "serve-favicon": "~2.3.2",
+    "shortid": "^2.2.8"
   },
   "devDependencies": {
     "mongoose": "^4.9.2"

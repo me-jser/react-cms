@@ -6,10 +6,7 @@ var postsData ={};//声明一个全局的object存放数据
 
 function getPostsData(){
     //find函数如果传入空的对象 {},数据接口无法更新
-    Data.find().
-    then(result => {
-        postsData = result;
-    });
+    Data.remove({postid:'B1Fe7ochg'})
 }
 
 getPostsData();

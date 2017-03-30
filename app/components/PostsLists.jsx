@@ -2,36 +2,35 @@ import React from 'react';
 
 
 var PostsLists = React.createClass({
-    getInitState: function(){
-        var PostsListsData = [];
+    getInitialState: function(){
+        return {
+            postsData: []
+        }
     },
     componentDidMount: function(){
+        $.get('http://localhost:8080/api').done(function(data) {
+            var arr = Object.keys(data).map(function(k) { return data[k] });
 
+            this.setState({postsData: arr});
+        }.bind(this));
     },
     render: function(){
+
         return (
             <tbody>
-            <tr>
-                <td><a href="">ES6新特性</a></td>
-                <td><a href="">John Smith</a></td>
-                <td><a href="">前端技术</a></td>
-                <td><a href="">JS,ES6</a></td>
-                <td>2017年03月26日</td>
-            </tr>
-            <tr>
-                <td><a href="">ES6新特性</a></td>
-                <td><a href="">John Smith</a></td>
-                <td><a href="">前端技术</a></td>
-                <td><a href="">JS,ES6</a></td>
-                <td>2017年03月26日</td>
-            </tr>
-            <tr>
-                <td><a href="">ES6新特性</a></td>
-                <td><a href="">John Smith</a></td>
-                <td><a href="">前端技术</a></td>
-                <td><a href="">JS,ES6</a></td>
-                <td>2017年03月26日</td>
-            </tr>
+
+            {
+
+                this.state.postsData.map(post =>
+                <tr key={post._id}>
+                     <td><a href={post.postid}>{post.title}</a></td>
+                     <td><a href="">{post.author}</a></td>
+                     <td><a href="">{post.catalog}</a></td>
+                     <td><a href="">{post.tags}</a></td>
+                     <td><a href="">{post.publishtime.toString().substring(0,10)}</a></td>
+                </tr>
+                )}
+
             </tbody>
 
         );

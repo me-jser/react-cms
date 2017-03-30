@@ -4,7 +4,7 @@
 var mongoose = require('mongoose');
 
 var db = require('../lib/connectMongo');
-
+var shortid = require('shortid');//生成id
 //一个用户模型
 var PostsSchema = new mongoose.Schema({
     title       : { type:String },
@@ -12,7 +12,7 @@ var PostsSchema = new mongoose.Schema({
     catalog     : { type: String},
     tags        : { type: String},
     publishtime : { type:Date, default:Date.now },
-    postid      : { type: String},
+    postid      : { type: String, default:shortid.generate},
     content     : { type: String}
 });
 //创建Model

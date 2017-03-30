@@ -9,11 +9,11 @@ import './styles/lib/reset'
 import './styles/sass/common/basicStyle'
 import './styles/images/importImg'
 
-import {App} from './components/App';
+import {Container} from './components/Container';
 
 
 
 ReactDOM.render(
-    <App />,
+    <Container />,
     document.getElementById('container')
 );
