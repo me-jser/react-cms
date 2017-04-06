@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+
 var Data = require('../lib/api');
 
 
@@ -20,7 +21,13 @@ router.get('/', function(req, res, next) {
     });
 
     res.setHeader('Content-Type', 'application/json');
-    res.send('success');
+    res.send({
+        title: title,
+        author: author,
+        catalog: catalog,
+        tags: tags,
+        content: content
+    });
     return true;
 
 });

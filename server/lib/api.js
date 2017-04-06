@@ -1,5 +1,5 @@
 var UserModel = require('../module/posts');
-
+var mongoose = require('mongoose');
 module.exports = {
     /**
      * 添加数据
