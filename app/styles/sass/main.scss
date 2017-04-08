@@ -1,66 +1,76 @@
 @import "common/common.scss";
 
-.container{
+.container {
   width: 100%;
 }
 
-.dash-menu{
+.dash-menu {
   width: $dashMenuWidth;
   height: 100%;
   background-color: $dashMenuBlack;
   position: absolute;
   left: 0;
-  top:0;
+  top: 0;
   padding: 20px 0;
   text-align: center;
 }
-.dash-options{
-  margin:0 0 0 $dashMenuWidth;
+
+.dash-options {
+  margin: 0 0 0 $dashMenuWidth;
 }
-.dash-menu--logo{
+
+.dash-menu--logo {
   font-size: 18px;
-  em{
-    margin:0 10px 0 0;
+  em {
+    margin: 0 10px 0 0;
   }
 }
-.dash-menu--board{
+
+.dash-menu--board {
   color: #ffffff;
   font-weight: bold;
 }
-.dash-menu--site{
+
+.dash-menu--site {
   color: $dashWordsColor;
+  a {
+    color: $dashWordsColor;
+  }
 }
-.dash-menu--avatar{
+
+.dash-menu--avatar {
   width: 90px;
   height: 90px;
   background-image: url('../images/varun.jpg');
   background-repeat: no-repeat;
-  -webkit-background-size:100% 100%;
+  -webkit-background-size: 100% 100%;
   background-position: center center;
-  background-size:100% 100%;
-  -webkit-border-radius:50px;
-  -moz-border-radius:50px;
-  border-radius:50px;
-  margin:20px 20px 10px ($dashMenuWidth - 90) / 2 ;
+  background-size: 100% 100%;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  margin: 20px 20px 10px ($dashMenuWidth - 90) / 2;
   text-align: center;
 }
-.dash-menu--owner{
+
+.dash-menu--owner {
   color: $dashWordsColor;
 }
-.dash-menu__menus--lists{
-  margin:$dashWidgetMarginTop 0 0 0;
-  ul{
-    li{
+
+.dash-menu__menus--lists {
+  margin: $dashWidgetMarginTop 0 0 0;
+  ul {
+    li {
       text-align: left;
       color: $dashWordsColor;
       line-height: 45px;
-      letter-spacing:0.5em;
+      letter-spacing: 0.5em;
       cursor: pointer;
-      &:hover{
+      &:hover {
         background-color: $dashListsHoverColor;
         color: $dashTextHoverColor;
       }
-      i{
+      i {
         margin: 0 25px 0 25px;
         font-size: 20px;
         float: left;
@@ -68,291 +78,323 @@
     }
   }
 }
-.dash-menu--items__selected{
+
+.dash-menu--items__selected {
   background-color: $dashTextHoverColor;
   color: #ffffff !important;
 }
-.dash-menu__lists__sub{
+
+.dash-menu__lists__sub {
   background-color: $dashMenuBlack;
-    li{
-      margin:0 0 0 77px;
-      &:hover{
-        background-color: $dashMenuBlack !important;
-      }
-      &:hover > a{
-        color: $dashTextHoverColor;
-      }
-      a{
-        color: $dashWordsColor;
-        
-      }
+  li {
+    margin: 0 0 0 77px;
+    &:hover {
+      background-color: $dashMenuBlack !important;
     }
+    &:hover > a {
+      color: $dashTextHoverColor;
+    }
+    a {
+      color: $dashWordsColor;
+
+    }
+  }
 
 }
-.dash-menu__items--active{
-  a{
+
+.dash-menu__items--active {
+  a {
     color: #ffffff !important;
   }
 
 }
-.tool-bar{
+
+.tool-bar {
   position: relative;
   height: 60px;
   line-height: 60px;
-  padding:0 20px;
+  padding: 0 20px;
   background-color: $dashTextHoverColor;
-  div{
+  div {
     display: inline-block;
   }
 }
-.tool-bar__dash--toogle{
-  a{
+
+.tool-bar__dash--toogle {
+  a {
     color: #ffffff;
-    font-size:$iconFontsFontSize;
+    font-size: $iconFontsFontSize;
   }
 }
-.tool-bar__search{
-  margin:0 0 0 15px;
+
+.tool-bar__search {
+  margin: 0 0 0 15px;
   position: relative;
 }
-.tool-bar__search__input{
+
+.tool-bar__search__input {
   height: 30px;
   line-height: 30px;
   width: 200px;
-  -webkit-border-radius:5px;
-  -moz-border-radius:5px;
-  border-radius:40px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 40px;
   border: none;
   padding: 0 10px;
   transition: width 1s;
-  outline:none;
-  &:focus{
-    width:400px;
+  outline: none;
+  &:focus {
+    width: 400px;
   }
 }
-.tool-bar__search--icon{
+
+.tool-bar__search--icon {
   position: absolute;
-  right:10px;
-  top:2px;
-  font-size:$iconFontsFontSize ;
+  right: 10px;
+  top: 2px;
+  font-size: $iconFontsFontSize;
   cursor: pointer;
 }
 
-.tool-bar__system--setting{
+.tool-bar__system--setting {
   position: absolute;
-  right:20px;
+  right: 20px;
   color: #ffffff;
-  font-size:$iconFontsFontSize - 2;
-  ul{
-    li{
+  font-size: $iconFontsFontSize - 2;
+  ul {
+    li {
       display: inline-block;
-      margin:0 0 0 20px;
-      a{
+      margin: 0 0 0 20px;
+      a {
         color: #ffffff;
         //font-size:$iconFontsFontSize - 2;
       }
     }
   }
 }
-.tool-bar__system__user{
-  a{
-    font-size:14px;
+
+.tool-bar__system__user {
+  a {
+    font-size: 14px;
   }
-  i{
-    margin:0 0 0 10px;
+  i {
+    margin: 0 0 0 10px;
   }
 }
-.posts{
+
+.posts {
   //background-color: #edf1f5;
   height: 100%;
   min-height: 600px;
 }
 
-.posts__header{
+.posts__header {
   position: relative;
   height: 60px;
   line-height: 60px;
   background-color: #ffffff;
   padding: 0 20px;
-  > *{
+  > * {
     display: inline-block;
   }
 }
-  .posts__header--name{
-  h1{
-    font-size:20px;
+
+.posts__header--name {
+  h1 {
+    font-size: 20px;
     color: $dashWordsColor;
   }
-  }
-.posts__header--filter{
-  width:100px;
+}
+
+.posts__header--filter {
+  width: 100px;
   position: absolute;
-  right:100px;
-  ul{
-    li{
+  right: 100px;
+  ul {
+    li {
       display: inline-block;
-      &:last-child:before{
+      &:last-child:before {
         color: #ccc;
         content: "/\00a0";
       }
     }
   }
 }
-.posts__header--publish{
+
+.posts__header--publish {
   position: absolute;
-  right:20px;
-  font-size:25px;
-  a{
-    &:hover{
+  right: 20px;
+  font-size: 25px;
+  a {
+    &:hover {
       @extend .fonts__color--blue
     }
   }
 
 }
-.posts__header--active{
+
+.posts__header--active {
   @extend .fonts__color--blue
 }
 
-.posts-lists{
+.posts-lists {
   background-color: #ffffff;
   width: 94%;
-  margin:$dashWidgetMarginTop auto auto;
+  margin: $dashWidgetMarginTop auto auto;
 }
-.post-lists__table{
+
+.post-lists__table {
   width: 100%;
   border: 1px #dedede solid;
-  thead tr{
-    height:40px;
+  thead tr {
+    height: 40px;
     line-height: 40px;
   }
-   tr{
-    height:100px;
-     line-height:50px;
+  tr {
+    height: 100px;
+    line-height: 50px;
+    td{
+      &:first-child{
+        width:40%;
+      }
+    }
+
   }
-  td{
+  td {
     text-align: center;
-    a{
-      @extend  .fonts__color--blue
+    a {
+      @extend .fonts__color--blue
     }
   }
- tbody  tr:nth-child(odd){
+  tbody tr:nth-child(odd) {
     background-color: #f9f9f9;
   }
 }
-.posts__form__wraper{
+
+.posts__form__wraper {
   position: relative;
   width: 94%;
-  margin:$dashWidgetMarginTop auto auto;
+  margin: $dashWidgetMarginTop auto auto;
 
 }
 
-.posts__info, .posts__form--style{
+.posts__info, .posts__form--style {
   display: inline-block;
 }
-.posts__form--style{
-  width:60%;
+
+.posts__form--style {
+  width: 60%;
 }
-.posts__info{
-  width:30%;
-  margin:0 0 0 20px;
+
+.posts__info {
+  width: 30%;
+  margin: 0 0 0 20px;
   position: absolute;
-  right:0;
+  right: 0;
   //background-color: #ffffff;
 }
-.posts__form__title{
-  width:100%;
-  height:40px;
+
+.posts__form__title {
+  width: 100%;
+  height: 40px;
   line-height: 40px;
   margin: 0 0 20px 0;
   font-size: 20px;
   font-weight: bold;
-  padding:0 0 0 20px;
+  padding: 0 0 0 20px;
   border: 1px #dedede solid;
   @extend .form__input--focus
 }
-.posts__from__content{
+
+.posts__from__content {
   width: 100%;
   margin: 0 0 20px 0;
-  padding:20px 0 20px 20px;
+  padding: 20px 0 20px 20px;
   font-size: 16px;
   border: 1px #dedede solid;
- @extend .form__input--focus
+  @extend .form__input--focus
 }
-.posts__form__save{
+
+.posts__form__save {
   background-color: $dashTextHoverColor;
   color: #ffffff;
   border: none;
   outline: none;
-  width:50px;
+  width: 50px;
   height: 30px;
   line-height: 30px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  text-shadow: 0 -1px 1px $dashTextHoverColor, 1px 0 1px $dashTextHoverColor, 0 1px 1px $dashTextHoverColor, -1px 0 1px$dashTextHoverColor;
+  text-shadow: 0 -1px 1px $dashTextHoverColor, 1px 0 1px $dashTextHoverColor, 0 1px 1px $dashTextHoverColor, -1px 0 1px $dashTextHoverColor;
   -webkit-box-shadow: 0 1px 0 #006799;
   -moz-box-shadow: 0 1px 0 #006799;
   box-shadow: 0 1px 0 #006799;
 }
-.posts__info--publish{
+
+.posts__info--publish {
   position: relative;
   width: 100%;
   background-color: #ffffff;
-  h1{
+  h1 {
     display: inline-block;
-    padding: 0  0 0 20px ;
+    padding: 0 0 0 20px;
   }
-  span{
+  span {
     display: inline-block;
     position: absolute;
-    right:20px;
-    a{
-      font-size:16px;
+    right: 20px;
+    a {
+      font-size: 16px;
       color: $dashWordsColor;
     }
   }
 }
-.posts__info--name{
+
+.posts__info--name {
   height: 40px;
   line-height: 40px;
   border-bottom: 1px #dedede solid;
 }
-.posts__publish__option{
-  height:60px;
+
+.posts__publish__option {
+  height: 60px;
   position: relative;
-  margin:$dashWidgetMarginTop 0 0 0;
-  padding:0 20px;
-  button{
+  margin: $dashWidgetMarginTop 0 0 0;
+  padding: 0 20px;
+  button {
     cursor: pointer;
     display: inline-block;
     @extend .posts__form__save
   }
 }
 
-.post__publish--preview{
+.post__publish--preview {
   position: absolute;
-  right:20px;
+  right: 20px;
 }
 
-.post__info--tags{
-  height:100px;
+.post__info--tags {
+  height: 100px;
   @extend .posts__publish__option
 }
-.post--tags__insert{
+
+.post--tags__insert {
   height: 25px;
   line-height: 25px;
-  width:70%;
-  margin:0 5px 0 0;
+  width: 70%;
+  margin: 0 5px 0 0;
   outline: none;
 
-  @extend .form__input--focus,.border__solid--gray
+  @extend .form__input--focus, .border__solid--gray
 }
-.post--tags__displayer{
-  margin:20px 0 0 0;
-  ul{
-    li{
+
+.post--tags__displayer {
+  margin: 20px 0 0 0;
+  ul {
+    li {
       display: inline-block;
-      margin:0 10px 0 0;
+      margin: 0 10px 0 0;
     }
   }
 

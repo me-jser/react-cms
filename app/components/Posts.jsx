@@ -1,4 +1,5 @@
 import React from 'react';
+import { Router, Route, Link } from 'react-router'
 import {PostsLists} from '../components/PostsLists';
 
 var Posts = React.createClass({
@@ -13,7 +14,8 @@ var Posts = React.createClass({
                             <li><a href="">草稿</a></li>
                         </ul>
                     </div>
-                    <div className="posts__header--publish "><a href="" className="font__icon--fonts">&#xe601;</a></div>
+                    <div className="posts__header--publish ">
+                        <a href="/addNewPost" className="font__icon--fonts">&#xe601;</a></div>
                 </div>
                 <article className="posts-lists">
                     <table className="post-lists__table">
@@ -24,6 +26,7 @@ var Posts = React.createClass({
                             <td>分类目录</td>
                             <td>标签</td>
                             <td>日期</td>
+                            <td>操作</td>
                         </tr>
                         </thead>
                         <PostsLists />

@@ -7,14 +7,23 @@ var postsData ={};//声明一个全局的object存放数据
 
 /* GET posts listing. */
 router.get('/', function(req, res, next) {
-    Data.find({postid:req.query.id}).
+    Data.update({postid:req.query.id},{
+        title:req.query.id
+    }).
     then(result => {
         postsData = result;
-    }).then(() =>{
+    }).
+    then((doc) =>{
         res.setHeader('Content-Type', 'application/json');
-        //console.log(postsData);
-        res.send(JSON.stringify(postsData));
-        return true;
+        if(doc){
+            res.send({
+                status: 'success'
+            });
+        }else {
+            res.send({
+                status: 'failed'
+            });
+        }
     });
 
 

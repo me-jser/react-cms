@@ -18,16 +18,23 @@ router.get('/', function(req, res, next) {
         catalog: catalog,
         tags: tags,
         content: content
+    },(err) =>{
+        console.log('error:'+err);
+    }).
+    then((doc) =>{
+        res.setHeader('Content-Type', 'application/json');
+        if(doc){
+            res.send({
+                status: 'success'
+            });
+        }else {
+            res.send({
+                status: 'failed'
+            });
+        }
     });
 
-    res.setHeader('Content-Type', 'application/json');
-    res.send({
-        title: title,
-        author: author,
-        catalog: catalog,
-        tags: tags,
-        content: content
-    });
+
     return true;
 
 });

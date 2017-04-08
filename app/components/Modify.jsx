@@ -1,6 +1,6 @@
 import  React from 'react';
 
-var Posting = React.createClass({
+var Modifing = React.createClass({
     getInitialState: function(){
         return {
             data :[],
@@ -12,7 +12,7 @@ var Posting = React.createClass({
         }
     },
     componentDidMount: function(){
-        var pattern = /post:(.*)/ig;
+        var pattern = /modify:(.*)/ig;
         var url =  window.location.href.match(pattern)//通过正则匹配获取到ID
         var ids = RegExp.$1;
         $.ajax({
@@ -34,7 +34,7 @@ var Posting = React.createClass({
 
             <div className="posts background__color--gray">
                 <div className="posts__header">
-                    <header className="posts__header--name"><h1>新文章</h1></header>
+                    <header className="posts__header--name"><h1>修改文章</h1></header>
                 </div>
                 <div className="posts__form__wraper">
                     <form action="http://localhost:3000/addpost" method="get" id="posts__form" className="background__color--gray posts__form--style ">
@@ -96,4 +96,4 @@ var Posting = React.createClass({
     }
 });
 
-export {Posting as Posting}
+export {Modifing as Modifing}

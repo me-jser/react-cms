@@ -5,18 +5,18 @@ import {DashOption} from '../components/DashOption';
 import {TollBar} from '../components/TollBar';
 import {Posts} from '../components/Posts';
 
-var Container = React.createClass({
+var App = React.createClass({
     render: function(){
         return(
             <div className="container">
                 <DashMenu />
-                <div className="dash-options">
+                <DashOption>
                     <TollBar />
                     <Posts />
-                </div>
+                </DashOption>
             </div>
         );
     }
 });
 
-export {Container as Container};
+export {App as App};

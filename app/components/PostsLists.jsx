@@ -2,6 +2,7 @@ import React from 'react';
 
 
 var PostsLists = React.createClass({
+
     getInitialState: function(){
         return {
             postsData: []
@@ -20,14 +21,14 @@ var PostsLists = React.createClass({
             <tbody>
 
             {
-
                 this.state.postsData.map(post =>
                 <tr key={post._id}>
-                     <td><a href={post.postid}>{post.title}</a></td>
+                     <td><a href={'/modify:'+ post.postid}>{post.title}</a></td>
                      <td><a href="">{post.author}</a></td>
                      <td><a href="">{post.catalog}</a></td>
                      <td><a href="">{post.tags}</a></td>
                      <td><a href="">{post.publishtime.toString().substring(0,10)}</a></td>
+                     <td><a href={'/modify:'+ post.postid}>修改</a>   <a href={'/del?id='+ post.postid}>删除</a> </td>
                 </tr>
                 )}
 

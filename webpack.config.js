@@ -30,9 +30,14 @@ module.exports = {
                 pathRewrite: {'^/api' : 'posts'},
                 changeOrigin: true
             },
-            '/user': {
+            '/getwithid': {
                 target: 'http://127.0.0.1:3000',
-                pathRewrite: {'^/user' : 'users'},
+                pathRewrite: {'^/getwithid' : 'getpost'},
+                changeOrigin: true
+            },
+            '/del': {
+                target: 'http://127.0.0.1:3000',
+                pathRewrite: {'^/del' : 'removepost'},
                 changeOrigin: true
             }
         }

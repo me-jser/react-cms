@@ -22,7 +22,6 @@ router.get('/', function(req, res, next) {
     }).
     then(() =>{
         res.setHeader('Content-Type', 'application/json');
-        //console.log(postsData);
         res.send(JSON.stringify(postsData));
         return true;
     });

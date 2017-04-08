@@ -4,7 +4,7 @@ var DashMenu = React.createClass({
     render: function(){
         return (
             <div className="dash-menu">
-                <aside className="dash-menu--logo"><em className="dash-menu--board">仪表盘</em><em className="dash-menu--site">一个前端</em></aside>
+                <aside className="dash-menu--logo"><em className="dash-menu--board">仪表盘</em><em className="dash-menu--site"><a href="/">一个前端</a></em></aside>
                 <aside className="dash-menu--avatar"></aside>
                 <aside className="dash-menu--owner">John Smith</aside>
                 <aside className="dash-menu__menus--lists">
