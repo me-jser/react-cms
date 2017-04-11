@@ -31,7 +31,7 @@ app.use('/posts', posts);
 app.use('/addpost', addpost);
 app.use('/getpost', getpost);
 app.use('/removepost', removepost);
-app.use('/modifiy', updatepost);
+app.use('/modify', updatepost);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

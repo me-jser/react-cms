@@ -1,25 +1,32 @@
 import React from 'react';
 
+import {RemovePosts} from '../components/RemovePosts';
 
 var PostsLists = React.createClass({
-
     getInitialState: function(){
         return {
-            postsData: []
+            postsData: [],
+            changeList:false,
+            postRemoved:null
         }
     },
-    componentDidMount: function(){
+    getPostData:function(){
         $.get('http://localhost:8080/api').done(function(data) {
             var arr = Object.keys(data).map(function(k) { return data[k] });
 
             this.setState({postsData: arr});
         }.bind(this));
     },
-    render: function(){
+    handleUpdateList:function(){
+        this.getPostData()
+    },
+    componentDidMount: function(){
+        this.getPostData()
 
+    },
+    render: function(){
         return (
             <tbody>
-
             {
                 this.state.postsData.map(post =>
                 <tr key={post._id}>
@@ -28,7 +35,7 @@ var PostsLists = React.createClass({
                      <td><a href="">{post.catalog}</a></td>
                      <td><a href="">{post.tags}</a></td>
                      <td><a href="">{post.publishtime.toString().substring(0,10)}</a></td>
-                     <td><a href={'/modify:'+ post.postid}>修改</a>   <a href={'/del?id='+ post.postid}>删除</a> </td>
+                     <td><a href={'/modify:'+ post.postid}>修改</a> <RemovePosts  removeAddr={'/del?id='+ post.postid} onRemove={this.handleUpdateList}/>   </td>
                 </tr>
                 )}
 

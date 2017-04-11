@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { DashMenu } from '../components/DashMenu';
-import {DashOptionModify} from '../components/DashOptionModify';
+import {DashOptionPosting} from '../components/DashOptionPosting';
 import {TollBar} from '../components/TollBar';
 import {Posts} from '../components/Posts';
 
@@ -10,7 +10,7 @@ var PostPage = React.createClass({
         return(
             <div className="container">
                 <DashMenu />
-                <DashOptionModify />
+                <DashOptionPosting />
             </div>
         );
     }

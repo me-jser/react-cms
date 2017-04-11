@@ -4,7 +4,6 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const webpack = require('webpack');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const proxy = require('http-proxy-middleware');
-const  BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 module.exports = {
     entry: path.resolve(__dirname, './app/index.js'),
     output:{
@@ -38,6 +37,11 @@ module.exports = {
             '/del': {
                 target: 'http://127.0.0.1:3000',
                 pathRewrite: {'^/del' : 'removepost'},
+                changeOrigin: true
+            },
+            '/update': {
+                target: 'http://127.0.0.1:3000',
+                pathRewrite: {'^/update' : 'modify'},
                 changeOrigin: true
             }
         }
