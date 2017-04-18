@@ -12,6 +12,10 @@ var getpost = require('./routes/getpost');
 var removepost = require('./routes/removepost');
 var updatepost = require('./routes/updatepost');
 
+var reg = require('./routes/reguser');
+var login = require('./routes/login');
+
+
 var app = express();
 
 // view engine setup
@@ -26,6 +30,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+//post router
 app.use('/', index);
 app.use('/posts', posts);
 app.use('/addpost', addpost);
@@ -33,6 +38,9 @@ app.use('/getpost', getpost);
 app.use('/removepost', removepost);
 app.use('/modify', updatepost);
 
+//user router
+app.use('/reg', reg);
+app.use('/login', login);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');

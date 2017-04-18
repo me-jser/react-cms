@@ -51,7 +51,10 @@ $iconFontsFontSize:20px;//icon的font-size
   }
 }
 
-
+//border
 .border__solid--gray{
   border: 1px #dedede solid;
+}
+.border__solid__bottom--gray{
+  border-bottom: 1px #dedede solid;
 }

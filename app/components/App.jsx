@@ -6,10 +6,13 @@ import {TollBar} from '../components/TollBar';
 import {Posts} from '../components/Posts';
 
 var App = React.createClass({
+    loginRequired: function(){
+        console.log("bingo!");
+    },
     render: function(){
         return(
             <div className="container">
-                <DashMenu />
+                <DashMenu onEnter={this.loginRequired} />
                 <DashOption>
                     <TollBar />
                     <Posts />

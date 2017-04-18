@@ -1,5 +1,6 @@
 import React from 'react';
 
+import $ from 'jquery'
 import {RemovePosts} from '../components/RemovePosts';
 
 var PostsLists = React.createClass({
@@ -7,12 +8,17 @@ var PostsLists = React.createClass({
         return {
             postsData: [],
             changeList:false,
-            postRemoved:null
+            postRemoved:null,
+            filterData:[]
         }
     },
     getPostData:function(){
-        $.get('http://localhost:8080/api').done(function(data) {
-            var arr = Object.keys(data).map(function(k) { return data[k] });
+        $.get('/api').done(function(data) {
+            var arr = Object.keys(data).map(function(k) {
+
+                return data[k];
+
+            });
 
             this.setState({postsData: arr});
         }.bind(this));
@@ -21,7 +27,7 @@ var PostsLists = React.createClass({
         this.getPostData()
     },
     componentDidMount: function(){
-        this.getPostData()
+        this.getPostData();
 
     },
     render: function(){

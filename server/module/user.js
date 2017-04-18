@@ -1,19 +1,19 @@
-var mongoose = require('mongoose');
 
+var mongoose = require('mongoose'),
+    Schema = mongoose.Schema,
+    passportLocalMongoose = require('passport-local-mongoose');
 var db = require('../lib/connectMongo');
 
-//一个用户模型
-var UserSchema = new mongoose.Schema({
-    username    : { type:String },
-    password    : {type: String},
+var User = new Schema({
+    username    : { type:String , required: true },
+    password    : {type: String, required: true},
     avatar      : {type: String},
     age         : { type:Number, default:0 },
-    description : { type: String},
     email       : { type: String },
-    github      : { type: String },
     time        : { type:Date, default:Date.now }
 });
-//创建Model
-var UserModel = db.model("user", UserSchema );
-module.exports = UserModel;
+
+User.plugin(passportLocalMongoose);
+
+module.exports = db.model('User', User);
 

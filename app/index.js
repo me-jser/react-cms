@@ -15,6 +15,10 @@ import {Posts} from './components/Posts';
 import {PostPage} from './components/PostPage';
 import {ModifyPost} from './components/ModifyPost';
 
+import {Filter} from './components/filter';
+import {Login} from './components/Login';
+import {Reg} from './components/Reg';
+
 import {
     Router, Route,browserHistory
 } from 'react-router'
@@ -23,8 +27,11 @@ import {
 ReactDOM.render(
     <Router history={browserHistory} >
         <Route path="/" component={App} />
+        <Route path="/signIn" component={Login} />
+        <Route path="/signUp" component={Reg} />
         <Route path="/addNewPost" component={PostPage} />
         <Route path="/modify:id" component={ModifyPost} />
+        <Route path="/f" component={Filter} />
     </Router>,
-    document.getElementById('container')
+    document.querySelector('#app')
 );

@@ -399,3 +399,95 @@
   }
 
 }
+//login
+.login--bar{
+  height: 60px;
+  line-height: 60px;
+  -webkit-box-shadow: 0 0 2px rgba(0,0,0,.5);
+  -moz-box-shadow: 0 0 2px rgba(0,0,0,.5);
+  box-shadow: 0 0 2px rgba(0,0,0,.5);
+  >div{
+    display: inline-block;
+  }
+}
+.login--site{
+  font-weight: bold;
+  width: 50%;
+  margin: 0 0 0 20%;
+}
+.login--type{
+  a{
+    color:$dashTextHoverColor;
+    display: inline-block;
+    border:1px $dashTextHoverColor solid;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 20px;
+    margin:0 0 0 20px;
+    &:hover{
+      background-color: $dashTextHoverColor;
+      color: #ffffff;
+    }
+  }
+}
+.login--form--body{
+  width:25%;
+  @extend .position__block--center;
+
+}
+.login--form{
+
+  div{
+    height: 100px;
+    line-height: 100px;
+  }
+  input{
+    height:60px;
+    line-height: 60px;
+    width: 70%;
+    background-color: #ffffff;
+    padding:0 20px;
+
+    @extend .form__input--focus, .border__solid--gray
+  }
+}
+.login--form--body{
+  background-color: #fafafa;
+  margin-top:15%;
+  border:1px #dedede solid;
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.25);
+  -moz-box-shadow: 0 1px 3px rgba(0,0,0,.25);
+  box-shadow: 0 1px 3px rgba(0,0,0,.25);
+  text-align: center;
+
+
+}
+.login--form--header, .login--form--username, .login--form--password{
+  @extend .border__solid__bottom--gray;
+}
+.login--form--header{
+  h2{
+    color: $dashTextHoverColor;
+    font-size:25px;
+  }
+}
+
+.login--from--submit{
+  position: relative;
+  button {
+    cursor: pointer;
+    display: inline-block;
+    @extend .posts__form__save
+  }
+  p{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top:110%;
+    font-size: 12px;
+    a{
+      color: $dashTextHoverColor;
+    }
+  }
+
+}

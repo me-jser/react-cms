@@ -1,5 +1,6 @@
 import React from 'react';
 var NotificationSystem = require('react-notification-system');
+import $ from 'jquery'
 var RemovePosts = React.createClass({
     _notificationSystem: null,
     propTypes: {

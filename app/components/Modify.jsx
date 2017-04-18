@@ -1,6 +1,6 @@
 import  React from 'react';
 var NotificationSystem = require('react-notification-system');
-
+import $ from 'jquery'
 var Modifing = React.createClass({
     getInitialState: function(){
         return {
