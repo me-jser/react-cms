@@ -44,3 +44,10 @@ ___
 4. 当前你应在 cms/server 目录 运行 ``` node app.js ``` 启动API服务
 5. ``` cd .. &&  webpack-dev-server --hot --inline``` 启动webpack服务
 
+### TODO
+___
+1. 预览和保存草稿
+2. lists filter
+3. dash animation
+4. tags/catalog animation
+5. dynamic tags 
