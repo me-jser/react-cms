@@ -22,7 +22,6 @@ var Posting = React.createClass({
                 value.toString('html')
             );
         }
-        console.log(this.state.value.toString('html'));
     },
     componentDidMount: function(){
         var user = cookie.load('userName');
@@ -101,13 +100,7 @@ var Posting = React.createClass({
                             <div className="post__info--tags">
                                     <input type="text" title="tags" name="tags" className="post--tags__insert"  form="posts__form" ref="tags" required />
                                         <button className="post--tags__add">添加</button>
-                                        <div className="post--tags__displayer">
-                                            <ul>
-                                                <li><i className="font__icon--fonts"><a href="">&#xe604;</a></i><a href="">前端</a></li>
-                                                <li><i className="font__icon--fonts"><a href="">&#xe604;</a></i><a href="">前端</a></li>
-                                                <li><i className="font__icon--fonts"><a href="">&#xe604;</a></i><a href="">前端</a></li>
-                                            </ul>
-                                        </div>
+
 
                             </div>
                         </aside> <aside className="posts__info--publish over__block--hidden box__margin__top--20">
@@ -117,13 +110,7 @@ var Posting = React.createClass({
                         <div className="post__info--tags">
                                 <input type="text" title="catalog" name="catalog" className="post--tags__insert" form="posts__form" ref="catalog"  />
                                     <button className="post--tags__add">添加</button>
-                                    <div className="post--tags__displayer">
-                                        <ul>
-                                            <li><i className="font__icon--fonts"><a href="">&#xe604;</a></i><a href="">前端</a></li>
-                                            <li><i className="font__icon--fonts"><a href="">&#xe604;</a></i><a href="">前端</a></li>
-                                            <li><i className="font__icon--fonts"><a href="">&#xe604;</a></i><a href="">前端</a></li>
-                                        </ul>
-                                    </div>
+
 
                         </div>
                     </aside>

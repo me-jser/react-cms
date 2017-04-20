@@ -54,7 +54,6 @@ var Modifing = React.createClass({
                 value.toString('html')
             );
         }
-        console.log(this.state.value.toString('html'));
     },
     handleModify:function(e){
         e.preventDefault();
