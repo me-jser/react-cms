@@ -16,6 +16,8 @@ ___
  - webpack -- 打包构建
  - babel -- 编译ES6
  - jsx -- render代码编写
+ - sass -- css预编译
+
 
  #### 后端: ####
  - NodeJs && express -- 服务、路由、API

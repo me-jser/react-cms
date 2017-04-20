@@ -55502,7 +55502,6 @@ var Modifing = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createClass({
             // would be better to avoid generating a string on each change.
             this.props.onChange(value.toString('html'));
         }
-        console.log(this.state.value.toString('html'));
     },
     handleModify: function (e) {
         e.preventDefault();
@@ -55868,7 +55867,6 @@ var Posting = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createClass({
             // would be better to avoid generating a string on each change.
             this.props.onChange(value.toString('html'));
         }
-        console.log(this.state.value.toString('html'));
     },
     componentDidMount: function () {
         var user = __WEBPACK_IMPORTED_MODULE_2_react_cookie___default.a.load('userName');
@@ -56027,68 +56025,6 @@ var Posting = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createClass({
                                 'button',
                                 { className: 'post--tags__add' },
                                 '\u6DFB\u52A0'
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'div',
-                                { className: 'post--tags__displayer' },
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    'ul',
-                                    null,
-                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                        'li',
-                                        null,
-                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                            'i',
-                                            { className: 'font__icon--fonts' },
-                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                                'a',
-                                                { href: '' },
-                                                '\uE604'
-                                            )
-                                        ),
-                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                            'a',
-                                            { href: '' },
-                                            '\u524D\u7AEF'
-                                        )
-                                    ),
-                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                        'li',
-                                        null,
-                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                            'i',
-                                            { className: 'font__icon--fonts' },
-                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                                'a',
-                                                { href: '' },
-                                                '\uE604'
-                                            )
-                                        ),
-                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                            'a',
-                                            { href: '' },
-                                            '\u524D\u7AEF'
-                                        )
-                                    ),
-                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                        'li',
-                                        null,
-                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                            'i',
-                                            { className: 'font__icon--fonts' },
-                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                                'a',
-                                                { href: '' },
-                                                '\uE604'
-                                            )
-                                        ),
-                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                            'a',
-                                            { href: '' },
-                                            '\u524D\u7AEF'
-                                        )
-                                    )
-                                )
                             )
                         )
                     ),
@@ -56122,68 +56058,6 @@ var Posting = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createClass({
                                 'button',
                                 { className: 'post--tags__add' },
                                 '\u6DFB\u52A0'
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'div',
-                                { className: 'post--tags__displayer' },
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    'ul',
-                                    null,
-                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                        'li',
-                                        null,
-                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                            'i',
-                                            { className: 'font__icon--fonts' },
-                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                                'a',
-                                                { href: '' },
-                                                '\uE604'
-                                            )
-                                        ),
-                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                            'a',
-                                            { href: '' },
-                                            '\u524D\u7AEF'
-                                        )
-                                    ),
-                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                        'li',
-                                        null,
-                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                            'i',
-                                            { className: 'font__icon--fonts' },
-                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                                'a',
-                                                { href: '' },
-                                                '\uE604'
-                                            )
-                                        ),
-                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                            'a',
-                                            { href: '' },
-                                            '\u524D\u7AEF'
-                                        )
-                                    ),
-                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                        'li',
-                                        null,
-                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                            'i',
-                                            { className: 'font__icon--fonts' },
-                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                                'a',
-                                                { href: '' },
-                                                '\uE604'
-                                            )
-                                        ),
-                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                            'a',
-                                            { href: '' },
-                                            '\u524D\u7AEF'
-                                        )
-                                    )
-                                )
                             )
                         )
                     )
