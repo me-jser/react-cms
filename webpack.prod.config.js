@@ -5,7 +5,6 @@ const webpack = require('webpack');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const proxy = require('http-proxy-middleware');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
 module.exports = {
     entry:{
       app:path.resolve(__dirname, './app/index.js')
@@ -121,6 +120,10 @@ module.exports = {
         }),
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify('production')
+        }),
+        new webpack.optimize.UglifyJsPlugin({
+            compress: { warnings: false },
+            minimize: true
         })
     ]
 };

@@ -1,16 +1,32 @@
 import  React from 'react';
 var NotificationSystem = require('react-notification-system');
-import $ from 'jquery'
+import $ from 'jquery';
+import cookie from 'react-cookie';
+import RichTextEditor from 'react-rte';
+
 var Posting = React.createClass({
     getInitialState: function(){
         return {
-            data :[],
-            postId:null,
-            title:null,
-            content:null,
-            tags:null,
-            catalog:null
+            author:null,
+            value: RichTextEditor.createEmptyValue()
+
         }
+    },
+    onChange : function(value){
+        this.setState({value:value});
+        if (this.props.onChange) {
+            // Send the changes up to the parent component as an HTML string.
+            // This is here to demonstrate using `.toString()` but in a real app it
+            // would be better to avoid generating a string on each change.
+            this.props.onChange(
+                value.toString('html')
+            );
+        }
+        console.log(this.state.value.toString('html'));
+    },
+    componentDidMount: function(){
+        var user = cookie.load('userName');
+        this.setState({author:user})
     },
     handleSubmit:function(event){
        event.preventDefault();
@@ -19,9 +35,10 @@ var Posting = React.createClass({
             url:this.refs.newpost.action,
             data:{
                 title:this.refs.title.value,
-                content:this.refs.content.value,
+                content:this.state.value.toString('html'),
                 tags:this.refs.tags.value,
                 catalog:this.refs.catalog.value,
+                author:this.state.author
             }
         }).done(function(result){
             result.status == 'success' ? this.showNotification() : this.showNotificationFailed()
@@ -50,7 +67,6 @@ var Posting = React.createClass({
     render: function(){
 
         return(
-
             <div className="posts background__color--gray">
                 <div className="posts__header">
                     <header className="posts__header--name"><h1>新文章</h1></header>
@@ -58,8 +74,12 @@ var Posting = React.createClass({
                 <div className="posts__form__wraper">
                     <form action="/new" method="get" id="posts__form" className="background__color--gray posts__form--style" onSubmit={this.handleSubmit} ref="newpost">
                         <div><input  name="title" className="posts__form__title" title="title" placeholder="在此输入标题" ref="title"  required /></div>
-                        <input type="hidden" name="author" className="posts__form__title" value="admin" />
-                        <div><textarea name="content" id="" cols="30" rows="20" className="posts__from__content" title="content" placeholder="在此输入正文" ref="content" required/></div>
+                        <div><RichTextEditor
+                            value={this.state.value}
+                            onChange={this.onChange}
+                            editorClassName="posts__form__rich"
+                            placeholder="让我们改变世界 | 点击编辑"
+                        /></div>
                         <div>
                             <button className="posts__form__save">发布</button>
                         </div>
@@ -95,7 +115,7 @@ var Posting = React.createClass({
                             <h1>分类</h1><span><a href="" className="font__icon--fonts">&#xe631;</a></span>
                         </header>
                         <div className="post__info--tags">
-                                <input type="text" title="catalog" name="catalog" className="post--tags__insert" form="posts__form" ref="catalog" required />
+                                <input type="text" title="catalog" name="catalog" className="post--tags__insert" form="posts__form" ref="catalog"  />
                                     <button className="post--tags__add">添加</button>
                                     <div className="post--tags__displayer">
                                         <ul>

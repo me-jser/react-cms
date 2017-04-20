@@ -1,7 +1,8 @@
 import React from 'react';
-
+import cookie from 'react-cookie';
 var TollBar = React.createClass({
     render: function(){
+        var user = cookie.load('userName');
         return(
             <header className="tool-bar">
                 <div className="tool-bar__dash--toogle"><i className="font__icon--fonts"><a href="">&#xe630;</a></i></div>
@@ -13,7 +14,7 @@ var TollBar = React.createClass({
                     <ul>
                         <li><a href="" className="font__icon--fonts">&#xe611;</a></li>
                         <li><a href="" className="font__icon--fonts">&#xe642;</a></li>
-                        <li className="tool-bar__system__user"><a href="" >John Smith</a><i className="font__icon--fonts">&#xe619;</i></li>
+                        <li className="tool-bar__system__user"><a href="" >{user}</a><i className="font__icon--fonts">&#xe619;</i></li>
                         <li><a href="" className="font__icon--fonts">&#xe600;</a></li>
                     </ul>
                 </div>

@@ -2,6 +2,8 @@ import React from 'react';
 var NotificationSystem = require('react-notification-system');
 import { browserHistory } from 'react-router';
 import $ from 'jquery'
+
+import cookie from 'react-cookie';
 var Login = React.createClass({
     handleLogin:function(e){
         e.preventDefault();
@@ -15,9 +17,12 @@ var Login = React.createClass({
             switch (result.status){
                 case 'success':
                     this.showNotification();
+                    cookie.save('userName', this.refs.user.value, {
+                        path: '/'
+                    });
                     setTimeout(() =>{
-                        browserHistory.push(`/`);
-                    },3000);
+                        browserHistory.push(`/home`);
+                    },2000);
 
                     break;
                 case 'failed':

@@ -12,7 +12,7 @@ var App = React.createClass({
     render: function(){
         return(
             <div className="container">
-                <DashMenu onEnter={this.loginRequired} />
+                <DashMenu  />
                 <DashOption>
                     <TollBar />
                     <Posts />

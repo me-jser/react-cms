@@ -59,4 +59,10 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+var server = app.listen(3000, function() {
+
+  console.log('Server listening at http://%s:%s');
+
+      });
+
 module.exports = app;

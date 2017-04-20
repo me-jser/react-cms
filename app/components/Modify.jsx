@@ -1,6 +1,9 @@
 import  React from 'react';
 var NotificationSystem = require('react-notification-system');
-import $ from 'jquery'
+import $ from 'jquery';
+
+import RichTextEditor from 'react-rte';
+
 var Modifing = React.createClass({
     getInitialState: function(){
         return {
@@ -9,7 +12,8 @@ var Modifing = React.createClass({
             title:null,
             content:null,
             tags:null,
-            catalog:null
+            catalog:null,
+            value: RichTextEditor.createEmptyValue()
         }
     },
     componentDidMount: function(){
@@ -17,15 +21,18 @@ var Modifing = React.createClass({
         var url =  window.location.href.match(pattern)//通过正则匹配获取到ID
         var ids = RegExp.$1;
         $.ajax({
-            url: 'http://localhost:8080/getwithid',
+            url: '/getwithid',
             data:{id:ids}
         }).done(function(postsJsonDatas){
             postsJsonDatas.map((postInfos)  =>{
                 this.refs.title.value=postInfos.title;
-                this.refs.content.value=postInfos.content;
+                //this.refs.content.value=postInfos.content;
                 this.refs.tags.value=postInfos.tags;
                 this.refs.catalog.value=postInfos.catalog;
 
+                this.setState({
+                    value:RichTextEditor.createValueFromString(postInfos.content, 'html')
+                });
                 this.setState({
                     postId:postInfos.postid,
                     title:postInfos.title,
@@ -37,6 +44,18 @@ var Modifing = React.createClass({
 
         }.bind(this))
     },
+    onChange : function(value){
+        this.setState({value:value});
+        if (this.props.onChange) {
+            // Send the changes up to the parent component as an HTML string.
+            // This is here to demonstrate using `.toString()` but in a real app it
+            // would be better to avoid generating a string on each change.
+            this.props.onChange(
+                value.toString('html')
+            );
+        }
+        console.log(this.state.value.toString('html'));
+    },
     handleModify:function(e){
         e.preventDefault();
         $.ajax({
@@ -45,7 +64,7 @@ var Modifing = React.createClass({
             data:{
                 id: this.state.postId,
                 title:this.refs.title.value,
-                content:this.refs.content.value,
+                content:this.state.value.toString('html'),
                 tags:this.refs.tags.value,
                 catalog:this.refs.catalog.value
             }
@@ -89,7 +108,11 @@ var Modifing = React.createClass({
                     <form action="http://localhost:3000/addpost" method="get" id="posts__form" className="background__color--gray posts__form--style" onSubmit={this.handleModify}>
                         <div><input  name="title" className="posts__form__title" title="title" placeholder="在此输入标题" ref="title" /></div>
                         <input type="hidden" name="author" className="posts__form__title" value="admin" />
-                        <div><textarea name="content" id="" cols="30" rows="20" className="posts__from__content" title="content" placeholder="在此输入正文" ref="content"/></div>
+                        <div><RichTextEditor
+                            value={this.state.value}
+                            onChange={this.onChange}
+                            editorClassName="posts__form__rich"
+                        /></div>
                         <div>
                             <button className="posts__form__save">修改</button>
                         </div>
