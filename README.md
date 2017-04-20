@@ -1,9 +1,11 @@
-##基于React + React-router + webpack 的CMS.
+##基于React + React-router + webpack 的CMS.##
+
 ___
 第一个react项目，由于项目比较小，没有使用redux。由于设计的功能点太多。所以留了部分坑，时间受限没有全部实现。部分代码比较粗糙
-###技术点
+
+### 技术点 ###
 ___
-####前端:
+#### 前端: ####
  - React -- 组件和逻辑
  - React-dom -- 组件渲染
  - React-router -- 路由
@@ -11,7 +13,7 @@ ___
  - babel -- 编译ES6
  - jsx -- render代码编写
 
- #### 后端:
+ #### 后端: ####
  - NodeJs && express -- 服务、路由、API
  - mongodb && mongoose -- 数据库
  - passport -- 对密码加密、salt 及校验
