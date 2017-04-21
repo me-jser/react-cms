@@ -5,7 +5,7 @@ var TollBar = React.createClass({
         var user = cookie.load('userName');
         return(
             <header className="tool-bar">
-                <div className="tool-bar__dash--toogle"><i className="font__icon--fonts"><a href="">&#xe630;</a></i></div>
+
                 <div className="tool-bar__search">
                     <input type="text" className="tool-bar__search__input" placeholder="搜索...." />
                         <i className="font__icon--fonts tool-bar__search--icon">&#xe652;</i>

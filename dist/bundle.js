@@ -13320,19 +13320,6 @@ var TollBar = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createClass({
             { className: 'tool-bar' },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
-                { className: 'tool-bar__dash--toogle' },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'i',
-                    { className: 'font__icon--fonts' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'a',
-                        { href: '' },
-                        '\uE630'
-                    )
-                )
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'div',
                 { className: 'tool-bar__search' },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'text', className: 'tool-bar__search__input', placeholder: '\u641C\u7D22....' }),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -14427,7 +14414,7 @@ var DashMenu = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createClass({
                                 { className: 'dash-menu__items--active' },
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                     'a',
-                                    { href: '' },
+                                    { href: '/home' },
                                     '\u6240\u6709\u6587\u7AE0'
                                 )
                             ),
@@ -14436,7 +14423,7 @@ var DashMenu = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createClass({
                                 null,
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                     'a',
-                                    { href: '' },
+                                    { href: '/addNewPost' },
                                     '\u5199\u6587\u7AE0'
                                 )
                             ),
@@ -14445,51 +14432,11 @@ var DashMenu = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createClass({
                                 null,
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                     'a',
-                                    { href: '' },
+                                    { href: 'javascript:void(0)', disabled: 'true' },
                                     '\u6807\u7B7E'
                                 )
                             )
                         )
-                    ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'li',
-                        null,
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'i',
-                            { className: 'font__icon--fonts' },
-                            '\uE76A'
-                        ),
-                        '\u5916\u89C2'
-                    ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'li',
-                        null,
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'i',
-                            { className: 'font__icon--fonts' },
-                            '\uE624'
-                        ),
-                        '\u7528\u6237'
-                    ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'li',
-                        null,
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'i',
-                            { className: 'font__icon--fonts' },
-                            '\uE606'
-                        ),
-                        '\u5DE5\u5177'
-                    ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'li',
-                        null,
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'i',
-                            { className: 'font__icon--fonts' },
-                            '\uE600'
-                        ),
-                        '\u8BBE\u7F6E'
                     )
                 )
             )

@@ -13,17 +13,12 @@ var DashMenu = React.createClass({
                     <ul>
                         <li className="dash-menu--items__selected"><i className="font__icon--fonts">&#xe642;</i>文章
                             <ul className="dash-menu__lists__sub">
-                                <li className="dash-menu__items--active"><a href="">所有文章</a></li>
-                                <li><a href="">写文章</a></li>
-                                <li><a href="">标签</a></li>
+                                <li className="dash-menu__items--active"><a href="/home">所有文章</a></li>
+                                <li><a href="/addNewPost">写文章</a></li>
+                                <li><a href="javascript:void(0)" disabled="true">标签</a></li>
                             </ul>
                         </li>
-                        <li><i className="font__icon--fonts">&#xe76a;</i>外观
 
-                        </li>
-                        <li ><i className="font__icon--fonts">&#xe624;</i>用户</li>
-                        <li><i className="font__icon--fonts">&#xe606;</i>工具</li>
-                        <li><i className="font__icon--fonts">&#xe600;</i>设置</li>
                     </ul>
                 </aside>
             </div>
